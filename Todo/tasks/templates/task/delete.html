@@ -1,0 +1,8 @@
+<h1>Delete</h1>
+
+<form action="{% url 'delete_task' task.id %}" method="post">
+    <p>Confirm Delete task [{{task}}]</p>
+    <a href="task/task.html">No</a>
+    {% csrf_token %}
+    <input type="submit" value="Yes">
+</form>
